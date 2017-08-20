@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+	<title>Untitled</title>
+	<meta charset="utf-8">
+	<style>
+	.forws {font-size:11px; font-family:arial}
+	</style>
+<script>
+function createWebSafe()
+{websafe=new Array("00","33","66", "99", "CC", "FF");
+str="<table border=0 class=forws  cellpadding=3 cellspacing=0>";
+for (R=0; R<6; R++)
+{ for (G=0; G<6; G++)
+	{str+="<tr>";
+	for (B=0; B<6; B++)
+		{color="#"+websafe[R]+websafe[G]+websafe[B];
+		str+="<td width=50 bgcolor="+color+">&nbsp;";
+		str+="<td width=50>"+color;
+		}
+} 	}
+str+="</table>";
+//alert(str);
+document.all.ws.innerHTML=str;
+} //end function
+
+</script>
+</head>
+
+<body onload="createWebSafe()">
+<h1>Стандартная палитра цветов.</h1>
+Все цвета задаются в цветовой модели RGN и цветовом пространстве sRGB (standart RGB).
+
+<table border=0 cellpadding="3" cellspacing="10">
+<colgroup>
+<col width=50>
+<col>
+<col width=50>
+<col>
+</colgroup>
+<tr>
+<td bgcolor= "#000000">&nbsp;</td>
+<td>Black = "#000000"</td>
+<td bgcolor="#008000">&nbsp;</td>
+<td>Green = "#008000"
+<br>
+</td>
+</tr>
+
+<tr>
+<td  bgcolor=Silver>&nbsp;</td>
+<td>Silver = "#C0C0C0"</td>
+<td bgcolor=Lime>&nbsp;</td>
+<td>Lime = "#00FF00"
+<br>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=Gray></td>
+<td>Gray = "#808080"</td>
+<td bgcolor=Olive></td>
+<td>Olive = "#808000"
+<br>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=White></td>
+<td>White = "#FFFFFF"</td>
+<td bgcolor=Yellow></td>
+<td>Yellow = "#FFFF00"
+<br>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=Maroon></td>
+<td>Maroon = "#800000"</td>
+<td bgcolor=Navy></td>
+<td>Navy = "#000080"
+<br>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=Red ></td>
+<td>Red = "#FF0000"</td>
+<td bgcolor=Blue></td>
+<td>Blue = "#0000FF"
+<br>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=Purple></td>
+<td>Purple = "#800080"</td>
+<td bgcolor=Teal></td>
+<td>Teal = "#008080"
+<br>
+</td>
+</tr>
+
+<tr>
+<td bgcolor=Fuchsia></td>
+<td>Fuchsia = "#FF00FF"</td>
+<td bgcolor=Aqua></td>
+<td>Aqua = "#00FFFF"
+<br>
+</td>
+</tr>
+</table>
+
+<h1>Безопасная палитра WEB (web safety colors)</h1>
+<div id="ws"></div>
+</body>
+</html>
